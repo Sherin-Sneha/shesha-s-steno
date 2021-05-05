@@ -4,14 +4,14 @@ import "firebase/analytics";
 import "firebase/firestore";
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBa5JMCEOvCkklMxs1NYPJWhp46FjYREn0",
-  authDomain: "shesha-s-steno.firebaseapp.com",
-  projectId: "shesha-s-steno",
-  storageBucket: "shesha-s-steno.appspot.com",
-  messagingSenderId: "516265955183",
-  appId: "1:516265955183:web:9f3ae39175ed8c32c4229a",
-  measurementId: "G-4XWV5CKDDT"
+var firebaseConfig = {
+  apiKey: "AIzaSyCRvxLdRNmFQ625MJ6k9vvUm2k-DOIJApU",
+  authDomain: "steno-ac5c3.firebaseapp.com",
+  projectId: "steno-ac5c3",
+  storageBucket: "steno-ac5c3.appspot.com",
+  messagingSenderId: "982680128565",
+  appId: "1:982680128565:web:8d518300c0ae7110ff757c",
+  measurementId: "G-B74Z2YK0H7"
 };
 
 firebase.initializeApp(firebaseConfig);

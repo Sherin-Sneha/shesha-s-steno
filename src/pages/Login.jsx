@@ -1,22 +1,23 @@
 import Button from "@material-ui/core/Button";
-import {useHistory} from "react-router-dom";
-import "./firebase";
+import { useHistory } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/auth";
+import "./firebase";
 
-export default function Login(){
-    const history =useHistory();
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-          // User is signed in.
-          console.log(user);
-          history.push("/home");
-        }
-      });
+export default function Login() {
 
-function signInWithGoogle(){
-    var provider = new firebase.auth.GoogleAuthProvider();
-    firebase
+   const history = useHistory();
+   firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+      // User is signed in.
+      console.log(user);
+      history.push("/home");
+    }
+  });
+   
+    function signInWithGoogle() {
+       var provider = new firebase.auth.GoogleAuthProvider();
+       firebase
       .auth()
       .signInWithPopup(provider)
       .then((result) => {
@@ -28,19 +29,19 @@ function signInWithGoogle(){
         var errorCode = error.code;
         var errorMessage = error.message;
       });
-}
 
+    }
 
     return(
-        <div className="container d-flex align-items-center justify-content-center flex-column"
-        style={{ minHeight: "100vh"}}>
-            <h2 className="mb-4">SheSha's Steno</h2>
-            <Button variant ="contained" 
-                    color="primary" 
-                    style={{textTransform: "capitalize"}}
-                    onClick={signInWithGoogle}>
-                    Sign in with Google
-            </Button>
-        </div>  
-    )
+      <div className="container d-flex align-items-center justify-content-center flex-column"
+      style={{ minHeight: "100vh"}}>
+          <h2 className="mb-4">The Steno</h2>
+          <Button variant ="contained" 
+                  color="primary" 
+                  style={{textTransform: "capitalize"}}
+                  onClick={signInWithGoogle}>
+                  Sign in with Google
+          </Button>
+      </div>  
+  );
 }
