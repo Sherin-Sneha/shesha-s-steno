@@ -13,7 +13,6 @@ export default function Notes(props) {
         <div className="filter">
           <h6 className="container">Filters : </h6>
           <Select
-            className= 'col-md-1'
             id="filters"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
