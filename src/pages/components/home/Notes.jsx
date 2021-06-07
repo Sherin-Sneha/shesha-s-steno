@@ -10,10 +10,11 @@ export default function Notes(props) {
     return (
       <>
         <h4 className="container">Your Notes</h4>
-        <div className="filter">
-          <h6 className="container">Filters : </h6>
+        <div className="filter" style="display: inline-flex;">
+          <h6 className="container" style="padding-left: 5px; margin-bottom: 0px; ">Filters : </h6>
           <Select
             id="filters"
+            style="padding-left: 5px;padding-top: 0px;
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
           >
